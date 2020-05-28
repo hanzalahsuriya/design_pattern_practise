@@ -12,7 +12,11 @@ namespace design_pattern {
 
             // PersonClonableExample.ClonablePeronClient.Execute ();
 
-            BasicSingelton.SingeltonClient.Execute ();
+            // BasicSingelton.SingeltonClient.Execute ();
+
+            // NS_SigeltonPerThread.SignLocalClient.Execute ();
+
+            Adapter_Example.Client.Execute ();
 
             Console.WriteLine ("Hello World!");
         }

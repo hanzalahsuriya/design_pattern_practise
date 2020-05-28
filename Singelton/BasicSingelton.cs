@@ -27,11 +27,34 @@ namespace BasicSingelton {
         public static IDatabase Instance => _instance.Value;
     }
 
+    public class Repository {
+        private readonly IDatabase _database;
+        public Repository (IDatabase database) {
+            this._database = database;
+        }
+
+        public int GetCityPopulation (string city) {
+            return this._database.GetCityPopulation (city);
+        }
+    }
+
+    public class FakeDatabase : IDatabase {
+        public int GetCityPopulation (string city) {
+            return -1;
+        }
+    }
+
     public class SingeltonClient {
         public static void Execute () {
             var db = DatabaseImpl.Instance;
             var city = "Karachi";
             WriteLine ($"City: {city} , Population: {db.GetCityPopulation (city)}");
+
+            var repo1 = new Repository (db);
+            WriteLine (repo1.GetCityPopulation (city));
+
+            var repo2 = new Repository (new FakeDatabase ());
+            WriteLine (repo2.GetCityPopulation (city));
         }
     }
 }
