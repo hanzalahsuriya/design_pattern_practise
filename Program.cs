@@ -16,7 +16,9 @@ namespace design_pattern {
 
             // NS_SigeltonPerThread.SignLocalClient.Execute ();
 
-            Adapter_Example.Client.Execute ();
+            // Adapter_Example.ClientMain.Execute ();
+
+            NS_ShapeColor.ClientShape.Execute ();
 
             Console.WriteLine ("Hello World!");
         }
