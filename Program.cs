@@ -18,7 +18,9 @@ namespace design_pattern {
 
             // Adapter_Example.ClientMain.Execute ();
 
-            NS_ShapeColor.ClientShape.Execute ();
+            // NS_ShapeColor.ClientShape.Execute ();
+
+            ShapeRenderUdemyCodingExcercise.ShapeRenderClientClass.Execute ();
 
             Console.WriteLine ("Hello World!");
         }
